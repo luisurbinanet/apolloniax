@@ -308,19 +308,9 @@ namespace OpenDental{
 		}*/
 
 		private void butLetterSimple_Click(object sender,EventArgs e) {
-			FormLetters FormL=new FormLetters(PatCur);
-			FormL.ShowDialog();
-			if(FormL.DialogResult==DialogResult.OK) {
-				DialogResult=DialogResult.OK;
-			}
 		}
 
 		private void butLetterMerge_Click(object sender,EventArgs e) {
-			FormLetterMerges FormL=new FormLetterMerges(PatCur);
-			FormL.ShowDialog();
-			if(FormL.DialogResult==DialogResult.OK) {
-				DialogResult=DialogResult.OK;
-			}
 		}
 
 		private void butLabel_Click(object sender,EventArgs e) {
@@ -356,12 +346,6 @@ namespace OpenDental{
 		}
 
 		private void butLetterSimpleRef_Click(object sender,EventArgs e) {
-			FormLetters FormL=new FormLetters(PatCur);
-			FormL.ReferralCur=ReferralCur;
-			FormL.ShowDialog();
-			if(FormL.DialogResult==DialogResult.OK) {
-				DialogResult=DialogResult.OK;
-			}
 		}
 
 		private void butLabelRef_Click(object sender,EventArgs e) {

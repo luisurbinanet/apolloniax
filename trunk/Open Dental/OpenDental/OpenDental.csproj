@@ -49,14 +49,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Required dlls\CDT.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.Microsoft.Office.Core, Version=2.2.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Required dlls\Interop.Microsoft.Office.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.Word, Version=8.2.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Required dlls\Interop.Word.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=1.0.7.30072, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Required dlls\MySql.Data.dll</HintPath>
@@ -162,9 +154,6 @@
     <Compile Include="Data Interface\Lan.cs" />
     <Compile Include="Data Interface\LanguageForeigns.cs" />
     <Compile Include="Data Interface\Ledgers.cs" />
-    <Compile Include="Data Interface\LetterMergeFields.cs" />
-    <Compile Include="Data Interface\LetterMerges.cs" />
-    <Compile Include="Data Interface\Letters.cs" />
     <Compile Include="Data Interface\MedicationPats.cs" />
     <Compile Include="Data Interface\Medications.cs" />
     <Compile Include="Data Interface\AccountModule.cs" />
@@ -800,21 +789,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormJournalEntryEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormLetterEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormLetterMergeEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormLetterMerges.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormLetters.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormLetterViewList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormLogOn.cs">
@@ -1910,26 +1884,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormJournalEntryEdit.resx">
       <DependentUpon>FormJournalEntryEdit.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormLetterEdit.resx">
-      <DependentUpon>FormLetterEdit.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormLetterMergeEdit.resx">
-      <DependentUpon>FormLetterMergeEdit.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormLetterMerges.resx">
-      <DependentUpon>FormLetterMerges.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormLetters.resx">
-      <DependentUpon>FormLetters.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormLetterViewList.resx">
-      <DependentUpon>FormLetterViewList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogOn.resx">

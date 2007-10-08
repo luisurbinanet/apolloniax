@@ -1407,13 +1407,6 @@ namespace OpenDental{
 				CovSpans.Refresh();
 				DisplayFields.Refresh();
 			}
-			if((itypes & InvalidTypes.Letters)==InvalidTypes.Letters){
-				Letters.Refresh();
-			}
-			if((itypes & InvalidTypes.LetterMerge)==InvalidTypes.LetterMerge){
-				LetterMergeFields.Refresh();
-				LetterMerges.Refresh();
-			}
 			if((itypes & InvalidTypes.Operatories)==InvalidTypes.Operatories){
 				Operatories.Refresh();
 				AccountingAutoPays.Refresh();
