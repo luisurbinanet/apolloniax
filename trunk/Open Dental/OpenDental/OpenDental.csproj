@@ -105,45 +105,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bridges\Apteryx.cs" />
-    <Compile Include="Bridges\PaperlessTechnology.cs" />
-    <Compile Include="Bridges\Dxis.cs" />
-    <Compile Include="Bridges\eztwain.cs" />
-    <Compile Include="Bridges\Vipersoft.cs" />
-    <Compile Include="Bridges\DBSWin.cs" />
-    <Compile Include="Bridges\DentalEye.cs" />
-    <Compile Include="Bridges\DentForms.cs" />
-    <Compile Include="Bridges\DentX.cs" />
-    <Compile Include="Bridges\Dexis.cs" />
-    <Compile Include="Bridges\DrCeph.cs" />
-    <Compile Include="Bridges\FloridaProbe.cs" />
-    <Compile Include="Bridges\FormHouseCalls.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bridges\FormIap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bridges\Iap.cs" />
-    <Compile Include="Bridges\ImageFX.cs" />
-    <Compile Include="Bridges\Lightyear.cs" />
-    <Compile Include="Bridges\MediaDent.cs" />
-    <Compile Include="Bridges\NewPatientForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bridges\NewPatientForm.Designer.cs">
-      <DependentUpon>NewPatientForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Bridges\Owandy.cs" />
-    <Compile Include="Bridges\PerioPal.cs" />
-    <Compile Include="Bridges\Planmeca.cs" />
-    <Compile Include="Bridges\Schick.cs" />
-    <Compile Include="Bridges\Sirona.cs" />
-    <Compile Include="Bridges\TigerView.cs" />
-    <Compile Include="Bridges\Trojan.cs" />
-    <Compile Include="Bridges\Trophy.cs" />
-    <Compile Include="Bridges\TrophyEnhanced.cs" />
-    <Compile Include="Bridges\VixWin.cs" />
-    <Compile Include="Bridges\VixWinOld.cs" />
     <Compile Include="Data Interface\AccountingAutoPays.cs" />
     <Compile Include="Data Interface\Accounts.cs" />
     <Compile Include="Data Interface\Adjustments.cs" />
@@ -1246,18 +1207,6 @@
     <Compile Include="Misc\Tooth.cs" />
     <Compile Include="Misc\VisiQuick.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Bridges\FormHouseCalls.resx">
-      <DependentUpon>FormHouseCalls.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Bridges\FormIap.resx">
-      <DependentUpon>FormIap.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Bridges\NewPatientForm.resx">
-      <DependentUpon>NewPatientForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Eclaims\FormCCDPrint.resx">
       <DependentUpon>FormCCDPrint.cs</DependentUpon>
       <SubType>Designer</SubType>

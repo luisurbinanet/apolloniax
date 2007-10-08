@@ -1237,7 +1237,6 @@ namespace OpenDental{
 			if(myOutlookBar.SelectedIndex==-1){
 				MsgBox.Show(this,"You do not have permission to use any modules.");
 			}
-			Bridges.Trojan.StartupCheck();
 		}
 
 		///<summary>Refreshes certain rarely used data from database.  Must supply the types of data to refresh as flags.  Also performs a few other tasks that must be done when local data is changed.</summary>
@@ -1430,9 +1429,6 @@ namespace OpenDental{
 			if((itypes & InvalidTypes.Programs)==InvalidTypes.Programs){
 				Programs.Refresh();
 				ProgramProperties.Refresh();
-				if(Programs.GetCur("PT").Enabled){
-					Bridges.PaperlessTechnology.InitializeFileWatcher();
-				}
 			}
 			if((itypes & InvalidTypes.Providers)==InvalidTypes.Providers){
 				Providers.Refresh();
