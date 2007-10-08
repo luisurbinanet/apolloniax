@@ -2495,10 +2495,6 @@
       <DependentUpon>FormReportOld2.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\FormReport.resx">
-      <DependentUpon>FormReport.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tables Old Grids\ContrPanelTable.resx">
       <DependentUpon>ContrPanelTable.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2774,9 +2770,6 @@
     <Compile Include="ReportingOld2\ReportOld2.cs" />
     <Compile Include="ReportingOld2\Section.cs" />
     <Compile Include="ReportingOld2\SectionCollection.cs" />
-    <Compile Include="Reporting\FormReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SmartCards\Belgium\BelgianIdentityCard.cs" />
     <Compile Include="SmartCards\Belgium\CertifCheck.cs" />
     <Compile Include="SmartCards\Belgium\CRLPolicyOptions.cs" />
@@ -3086,14 +3079,6 @@
     <ProjectReference Include="..\OpenDentBusiness\OpenDentBusiness.csproj">
       <Project>{3D0FC76E-803C-4DE2-BDB1-47D63A4E2357}</Project>
       <Name>OpenDentBusiness</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RdlEngine\RdlEngine.csproj">
-      <Project>{C97E91F4-B310-44E2-9B6C-96775395722D}</Project>
-      <Name>RdlEngine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RdlViewer\RdlViewer.csproj">
-      <Project>{D99145B1-CB6C-41F5-BA86-723325145FB5}</Project>
-      <Name>RdlViewer</Name>
     </ProjectReference>
     <ProjectReference Include="..\SparksToothChart\SparksToothChart.csproj">
       <Project>{033B77F4-2E98-49A7-901F-5F388DEDF83E}</Project>
