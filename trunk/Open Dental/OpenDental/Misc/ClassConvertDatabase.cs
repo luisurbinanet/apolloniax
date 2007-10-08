@@ -5116,21 +5116,7 @@ namespace OpenDental{
 				General.NonQEx(command);
 				//added after r301
 				//Load ADA2006 claimform (without background)---------------------------------------------------------------------
-				try{
-					int claimFormNum=FormClaimForms.ImportForm("",true,Properties.Resources.ClaimForm2006);
-					if(CultureInfo.CurrentCulture.Name=="en-US"){
-						command="UPDATE preference SET ValueString="+POut.PInt(claimFormNum)+" WHERE PrefName='DefaultClaimForm'";
-						General.NonQEx(command);
-					}
-					command="UPDATE insplan SET ClaimFormNum="+POut.PInt(claimFormNum)
-						+" WHERE insplan.ClaimFormNum= (SELECT claimform.ClaimFormNum FROM claimform WHERE claimform.UniqueID='OD1')";
-					General.NonQEx(command);
-					command="UPDATE insplan SET ClaimFormNum="+POut.PInt(claimFormNum)+" WHERE insplan.ClaimFormNum=0";
-					General.NonQEx(command);
-				}
-				catch {
-					//user will have to do it manually
-				}
+				// -- REMOVED in Apolloniax --
 				//added after r303
 				command="INSERT INTO preference VALUES('RegistrationKey','')";
 				General.NonQEx(command);

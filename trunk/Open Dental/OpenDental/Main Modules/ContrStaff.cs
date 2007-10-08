@@ -652,14 +652,6 @@ namespace OpenDental{
 		}
 
 		private void butSendClaims_Click(object sender, System.EventArgs e) {
-			Cursor=Cursors.WaitCursor;
-			FormClaimsSend FormCS=new FormClaimsSend();
-			FormCS.ShowDialog();
-			if(FormCS.GotoPatNum!=0 && FormCS.GotoClaimNum!=0) {
-				OnPatientSelected(FormCS.GotoPatNum);
-				GotoModule.GotoClaim(FormCS.GotoClaimNum);
-			}
-			Cursor=Cursors.Default;
 		}
 
 		private void butBilling_Click(object sender,System.EventArgs e) {
