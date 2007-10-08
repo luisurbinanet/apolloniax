@@ -2481,22 +2481,6 @@ namespace OpenDental{
 
 		///<summary>Only visible if Computer set to Canada.</summary>
 		private void butCanadaEligibility_Click(object sender,EventArgs e) {
-			if(textDentaide.errorProvider1.GetError(textDentaide)!="") {
-				MsgBox.Show(this,"Please fix data entry errors first.");
-				return;
-			}
-			string result="";
-			try{
-				result=Eclaims.CanadianOutput.SendElegibility(textElectID.Text,PatPlanCur.PatNum,textGroupNum.Text,textDivisionNo.Text,
-					textSubscriberID.Text,textPatID.Text,(Relat)comboRelationship.SelectedIndex,PlanCur.Subscriber,textDentaide.Text);
-				//printout will happen in the line above.
-			}
-			catch(ApplicationException ex){
-				MessageBox.Show(ex.Message);
-				return;
-			}
-			PlanCur.BenefitNotes+=result;
-			butBenefitNotes.Enabled=true;
 		}
 
 		///<summary>This button is always active.</summary>
@@ -2723,10 +2707,6 @@ namespace OpenDental{
 			}
 			if(clearhouse.CommBridge==EclaimsCommBridge.ClaimConnect){
 				EligibilityCheckDentalXchange();
-				return;
-			}
-			if(clearhouse.CommBridge==EclaimsCommBridge.Tesia) {
-				Eclaims.Tesia.Eligibility270();
 				return;
 			}
 			MsgBox.Show(this,"We do not have eligibility checks functional with your default clearinghouse.");

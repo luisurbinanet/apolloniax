@@ -1993,58 +1993,12 @@ namespace OpenDental{
 		}
 
 		private void tbIns_CellDoubleClicked(object sender, OpenDental.CellEventArgs e) {
-			FormClaimProc FormC=new FormClaimProc(ClaimProcsForProc[e.Row],ProcCur,FamCur,PlanList);
-			if(!butOK.Enabled){
-				FormC.NoPermission=true;
-			}
-			FormC.ShowDialog();
-			FillIns();
 		}
 
 		private void butAddEstimate_Click(object sender, System.EventArgs e) {
-			FormInsPlanSelect FormIS=new FormInsPlanSelect(PatCur.PatNum);
-			FormIS.ShowDialog();
-			if(FormIS.DialogResult==DialogResult.Cancel){
-				return;
-			}
-			Benefit[] benList=Benefits.Refresh(PatPlanList);
-			ClaimProc cp=new ClaimProc();
-			ClaimProcs.CreateEst(cp,ProcCur,FormIS.SelectedPlan);
-			if(FormIS.SelectedPlan.PlanNum==PatPlans.GetPlanNum(PatPlanList,1)){
-				ClaimProcs.ComputeBaseEst(cp,ProcCur,PriSecTot.Pri,PlanList,PatPlanList,benList);
-			}
-			else if(FormIS.SelectedPlan.PlanNum==PatPlans.GetPlanNum(PatPlanList,2)){
-				ClaimProcs.ComputeBaseEst(cp,ProcCur,PriSecTot.Sec,PlanList,PatPlanList,benList);
-			}
-			FormClaimProc FormC=new FormClaimProc(cp,ProcCur,FamCur,PlanList);
-			//FormC.NoPermission not needed because butAddEstimate not enabled
-			FormC.ShowDialog();
-			if(FormC.DialogResult==DialogResult.Cancel){
-				ClaimProcs.Delete(cp);
-			}
-			FillIns();
 		}
 
 		private void FillPayments(){
-			PaySplit[] PaySplitList=PaySplits.Refresh(ProcCur.PatNum);
-			PaySplitsForProc=PaySplits.GetForProc(ProcCur.ProcNum,PaySplitList);
-			int[] payNums=new int[PaySplitsForProc.Count];
-			for(int i=0;i<payNums.Length;i++){
-				payNums[i]=((PaySplit)PaySplitsForProc[i]).PayNum;
-			}
-			PaymentsForProc=Payments.GetPayments(payNums);
-			tbPay.ResetRows(PaySplitsForProc.Count);
-			Payment PaymentCur;//used in loop
-			for(int i=0;i<PaySplitsForProc.Count;i++){
-				tbPay.Cell[0,i]=((PaySplit)PaySplitsForProc[i]).DatePay.ToShortDateString();
-				tbPay.Cell[1,i]=((PaySplit)PaySplitsForProc[i]).SplitAmt.ToString("F");
-				tbPay.FontBold[1,i]=true;
-				PaymentCur=Payments.GetFromList(((PaySplit)PaySplitsForProc[i]).PayNum,PaymentsForProc);
-				tbPay.Cell[2,i]=PaymentCur.PayAmt.ToString("F");
-				tbPay.Cell[3,i]=PaymentCur.PayNote;
-			}
-			tbPay.SetGridColor(Color.LightGray);
-			tbPay.LayoutTables();
 		}
 
 		private void tbPay_CellDoubleClicked(object sender, OpenDental.CellEventArgs e) {

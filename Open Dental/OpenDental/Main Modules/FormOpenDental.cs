@@ -2188,21 +2188,9 @@ namespace OpenDental{
 		}
 
 		private void menuItemClaimForms_Click(object sender, System.EventArgs e) {
-			if(!Security.IsAuthorized(Permissions.Setup)){
-				return;
-			}
-			FormClaimForms FormCF=new FormClaimForms();
-			FormCF.ShowDialog();
-			SecurityLogs.MakeLogEntry(Permissions.Setup,0,"Claim Forms");
 		}
 
 		private void menuItemClearinghouses_Click(object sender, System.EventArgs e) {
-			if(!Security.IsAuthorized(Permissions.Setup)){
-				return;
-			}
-			FormClearinghouses FormC=new FormClearinghouses();
-			FormC.ShowDialog();
-			SecurityLogs.MakeLogEntry(Permissions.Setup,0,"Clearinghouses");
 		}
 
 		private void menuItemComputers_Click(object sender, System.EventArgs e) {
