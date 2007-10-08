@@ -2710,14 +2710,9 @@ namespace OpenDental{
 		}
 
 		private void menuItemTerminal_Click(object sender,EventArgs e) {
-			FormTerminal FormT=new FormTerminal();
-			FormT.Show();
-			//Application.Exit();//always close after coming out of terminal mode as a safety precaution.
 		}
 
 		private void menuItemTerminalManager_Click(object sender,EventArgs e) {
-			FormTerminalManager FormT=new FormTerminalManager();
-			FormT.Show();
 		}
 
 		private void menuItemReqStudents_Click(object sender,EventArgs e) {
