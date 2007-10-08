@@ -7,12 +7,7 @@ using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
-#if !LINUX
-using Oracle.DataAccess.Client;
-using Oracle.DataAccess.Types;
-#else
 using System.Data.OracleClient;
-#endif
 using CodeBase;
 
 namespace OpenDentBusiness{
