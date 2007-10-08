@@ -53,10 +53,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Required dlls\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="RS232, Version=1.18.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Required dlls\RS232.dll</HintPath>
-    </Reference>
     <Reference Include="SigPlusNET, Version=1.0.2057.23757, Culture=neutral, PublicKeyToken=6aef07010bb0624f">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Required dlls\SigPlusNET.dll</HintPath>
@@ -237,9 +233,6 @@
       <DependentUpon>FormCCDPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="Eclaims\Eclaims.cs" />
-    <Compile Include="Eclaims\FormTerminal.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Eclaims\Inmediata.cs" />
     <Compile Include="Eclaims\RECS.cs" />
     <Compile Include="Eclaims\Renaissance.cs" />
@@ -1076,12 +1069,6 @@
     <Compile Include="Forms\FormTelephone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormTerminal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormTerminalManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\FormTimeAdjustEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1172,10 +1159,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Eclaims\FormCCDPrint.resx">
       <DependentUpon>FormCCDPrint.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Eclaims\FormTerminal.resx">
-      <DependentUpon>FormTerminal.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Reports\FormRpPPOwriteoffs.resx">
@@ -2261,14 +2244,6 @@
     <EmbeddedResource Include="Forms\FormTelephone.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormTelephone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormTerminal.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FormTerminal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormTerminalManager.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FormTerminalManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTimeAdjustEdit.resx">
       <SubType>Designer</SubType>
